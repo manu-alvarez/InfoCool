@@ -3,7 +3,7 @@ name: InfoCool dependency lock repair
 on:
   push:
     branches: [ci/verify-infocol-20261123]
-    paths: [.github/workflows/dependency-repair.yml]
+    paths: [.github/workflows/dependency-repair.yml, frontend/next.config.ts]
 
 permissions:
   contents: write
