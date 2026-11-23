@@ -5,7 +5,7 @@
 
 **Diseñado y desarrollado por**: [Manu Alvarez](https://linkedin.com/in/manu-alvarez) · Creador del producto
 
-[![Tests](https://img.shields.io/badge/tests-15%2F15-success)]() [![Python](https://img.shields.io/badge/python-3.14-blue)]() [![Frontend](https://img.shields.io/badge/next.js-16.2.7-black)]() [![RGPD](https://img.shields.io/badge/RGPD%2FLOPD-compliant-success)]()
+[![Tests](https://img.shields.io/badge/tests-15%2F15-success)]() [![Python](https://img.shields.io/badge/python-3.14-blue)]() [![Frontend](https://img.shields.io/badge/next.js-16.2.7-black)]() 
 
 ---
 
@@ -39,14 +39,14 @@
 └─────────────────────────────────────────────────────────────┘
 ```
 
-### Resultados Medidos
+### Resultados y validación
 
-| Métrica | Antes | Después | Mejora |
-|---------|-------|---------|--------|
-| Tiempo medio por expediente | 2 min 10 s | 28 s | **-78%** |
-| Errores de código de tarifa | 8% | 0% (revisión final) | **-100%** |
-| Expedientes procesados/día | 25 | 80+ | **+220%** |
-| Confianza de la IA | — | 97% media | — |
+Los valores de productividad y reducción de errores no cuentan con una medición reproducible en este repositorio. No deben presentarse como resultados reales hasta ejecutar una evaluación con expedientes autorizados y datos anonimizados.
+
+- **Backend:** suite Python ejecutada automáticamente en GitHub Actions.
+- **Frontend:** compilación de producción Next.js 16 validada en GitHub Actions.
+- **Portal MAPFRE real:** conexión y permisos no comprobados en estas pruebas; el proyecto no está afiliado oficialmente a MAPFRE.
+
 
 ---
 
@@ -55,7 +55,7 @@
 ### Prerrequisitos
 
 - macOS 14+ / Linux / WSL2
-- Python 3.14+
+- Python 3.10+
 - Node.js 22+
 - Chromium (instalado por Playwright)
 
@@ -63,9 +63,9 @@
 
 ```bash
 cd /Users/manu/Desktop/MAPFRE
-python3.14 -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate
-pip install -e ".[dev]"
+pip install -e . pytest
 playwright install chromium
 ```
 
