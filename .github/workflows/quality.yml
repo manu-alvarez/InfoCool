@@ -2,7 +2,7 @@ name: InfoCool validation
 
 on:
   push:
-    branches: [ci/verify-infocol-20261123]
+    branches: [main]
   pull_request:
     branches: [main]
 
